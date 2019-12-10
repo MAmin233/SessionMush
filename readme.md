@@ -46,7 +46,7 @@ request.session.save(); // it will save all changes in the database
 
 This project is made with **love**  and for personal usage so just using it in your projects can help but reporting bugs or any suggestions can help a lot too.
 
-You can also buy a cup of coffee for me :
+You can also buy a cup of coffee :
 
 bitcoin: bc1qj7mhszy62pz26a7yvwgvt98aermqsdqvzy506d
 
