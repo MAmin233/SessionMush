@@ -49,6 +49,7 @@ This project is made with **love**  and for personal usage so just using it in y
 You can also buy a cup of coffee for me :
 
 bitcoin: bc1qj7mhszy62pz26a7yvwgvt98aermqsdqvzy506d
+
 ethereum: 0xeC9ff6E32462caCcf76dFd2aEDF68Bb7c0F1d0Ed
 
 ## Contact to baker
