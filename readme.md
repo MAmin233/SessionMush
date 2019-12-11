@@ -18,8 +18,8 @@ A session can be expire too when it doesn't used for a threshold time. so when t
 ## Usage ( with express-js )
 It created to be use with express js but its functions can be use in other things too however to use it in express js after downloading this and added to your project you can use its wroten express middleware ( but you should remember that it use mongodb as database using mongoose to store sessions so don't forget to connect mongoose to your database first )
 ```js
-	const sessionMush_middleware = require('./sessionMush/express');
-	your_express_server.use(sessionMush_middleware);
+const sessionMush_middleware = require('./sessionMush/express');
+your_express_server.use(sessionMush_middleware);
 ```
 
 After that with every request to your server you will have a session object that added to that request. so you can use it to store new states or any data that you want. suppose we have an express middleware like below:
