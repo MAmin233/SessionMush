@@ -1,6 +1,7 @@
 const { SESSION_ID_PROPERTY_KEY } = require("./constants");
 
 const sessionMethods = require("../methods");
+const sessionDB = require("../database");
 
 module.exports.sessionExist = function(s) {
   return s ? true : false;
@@ -25,7 +26,7 @@ module.exports.addSessionToRequest = function(session_on_db, request) {
   async function update_session_on_db() {
     session_on_db.data = this.data;
     session_on_db.last_update_date = Date.now();
-    await sessionDB.updateSession(session_on_db);
+    var temp = await sessionDB.updateSession(session_on_db);
     return this;
   }
 
@@ -39,6 +40,10 @@ module.exports.addSessionToRequest = function(session_on_db, request) {
 
   return request.session = session;
 };
+
+module.exports.saveSessionObjectToDatabase = async function(session_object) {
+  return await sessionDB.saveSessionObject(session_object);
+}
 
 module.exports.createSessionObject = function() {
   return sessionMethods.createSession();

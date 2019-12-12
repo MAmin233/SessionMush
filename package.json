@@ -1,0 +1,27 @@
+{
+  "name": "sessionmush",
+  "version": "1.0.0",
+  "description": "Something that helps to manage sessions in server side",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "cd tests && nodemon express_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAmin233/SessionMush.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAmin233/SessionMush/issues"
+  },
+  "homepage": "https://github.com/MAmin233/SessionMush#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.0"
+  }
+}

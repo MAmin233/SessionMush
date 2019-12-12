@@ -3,10 +3,12 @@ const {
   setSessionToResponse,
   addSessionToRequest,
   sessionExist,
-  createSessionObject
+  createSessionObject,
+  saveSessionObjectToDatabase,
+  validateSession
 } = require("./utils");
 
-const sessionDB = require("../db");
+const sessionDB = require("../database");
 
 async function middleware(request, response, next) {
   // gather data from headers
@@ -23,7 +25,7 @@ async function middleware(request, response, next) {
 
   if (!valid_session) {
     var session_object = createSessionObject();
-    var session_on_db = await sessionDB.saveSessionObject(session_object);
+    var session_on_db = await saveSessionObjectToDatabase(session_object)
     setSessionToResponse(session_on_db, response);
     addSessionToRequest(session_on_db, request);
   }

@@ -10,30 +10,26 @@ exports.saveSessionObject = async function(session_object) {
   });
 
   return await session_on_db.save();
-}
+};
 
 // session: SessionModel object
-async function deleteSession(session) {
+exports.deleteSession = async function(session) {
   return await session.remove();
-}
+};
 
 // session: SessionModel object
-async function updateSession(session) {
+exports.updateSession = async function(session) {
+  session.markModified('data');
   return await session.save();
-}
+};
 
 // session_id: Unique identity string
-async function findSessionById(session_id) {
+exports.findSessionById = async function(session_id) {
   if (!session_id) return null;
-
   var session = await SessionModel.findOne({
     session_id: session_id
   });
-
   return session;
-}
+};
 
 var exports = module.exports;
-exports.updateSession = updateSession;
-exports.deleteSession = deleteSession;
-exports.findSessionById = findSessionById;
