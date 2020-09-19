@@ -44,14 +44,5 @@ request.session.save(); // it will save all changes in the database
 
 ## Contribute
 
-This project is made with **love**  and for personal usage so just using it in your projects can help but reporting bugs or any suggestions can help a lot too.
+This project is made for personal usage so just using it in your projects can help but reporting bugs or any suggestions can help a lot too.
 
-You can also buy a cup of coffee :
-
-bitcoin: bc1qj7mhszy62pz26a7yvwgvt98aermqsdqvzy506d
-
-ethereum: 0xeC9ff6E32462caCcf76dFd2aEDF68Bb7c0F1d0Ed
-
-## Contact to baker
-
-email: amin.msh233@gmail.com
